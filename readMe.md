@@ -178,10 +178,7 @@ function App() {
 export default App;
 ```
 ---
-### 3.5. Thêm CSS vào style.css
-Bạn có thể dùng lại file CSS bạn đã gửi trước đó vào public
 
----
 ## 🚀 Bước 4: Chạy ứng dụng
 ### 4.1. Chạy backend
 ```bash
