@@ -1,6 +1,5 @@
-```
-xây dựng dự án Todo List kết nối MySQL theo từng bước rõ ràng, gồm cả backend (Node.js + Express) và frontend (React).
-```
+>xây dựng dự án Todo List kết nối MySQL theo từng bước rõ ràng, gồm cả backend (Node.js + Express) và frontend (React).
+---
 
 ## 🧱 Bước 1: Tạo cấu trúc thư mục dự án
 ```bash
@@ -99,9 +98,9 @@ frontend/
 ├── src/
 │   ├── components/
 │   │   └── ToDoApp.js
+│   │   └── ToDoApp.css
 │   ├── App.js
 │   ├── index.js
-│   └── style.css
 ```
 ---
 ### 3.3. Viết component ToDoApp.js
@@ -109,7 +108,7 @@ frontend/
 // src/components/ToDoApp.js
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../style.css";
+import "./ToDoApp.css";
 
 function ToDoApp() {
   const [tasks, setTasks] = useState([]);
@@ -227,15 +226,12 @@ CREATE TABLE tasks (
 );
 ```
 ---
-Cập nhật thông tin kết nối trong server.js nếu cần:
-```js
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "", // sửa theo mật khẩu MySQL của bạn
-  database: "todo_app",
-});
+Cập nhật thông tin kết nối, thay đổi các thông số cần thiết
+```bash
+cd backend
+cp .env.example .env
 ```
+
 ---
 Chạy server:
 ```bash
