@@ -87,5 +87,5 @@ app.delete("/tasks/:id", (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log("Backend server is running on port 3001");
+  console.log(`Backend server is running on port ${PORT}`);
 });

@@ -33,10 +33,10 @@ app.use(express.json());
 
 // Kết nối MySQL
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "", // sửa theo mật khẩu MySQL của bạn
-  database: "todo_app",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
 });
 
 // Lấy danh sách task
@@ -65,8 +65,9 @@ app.delete("/tasks/:id", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log("Backend server is running on port 3001");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Backend server is running on port ${PORT}`);
 });
 ```
 ---
