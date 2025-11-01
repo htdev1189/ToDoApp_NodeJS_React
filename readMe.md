@@ -213,9 +213,9 @@ npm install
 #### ⚙️ Cấu hình MySQL
 Tạo database và bảng:
 ```sql
-CREATE DATABASE todo_app;
+CREATE DATABASE react_todo_app;
 
-USE todo_app;
+USE react_todo_app;
 
 CREATE TABLE tasks (
   id INT AUTO_INCREMENT PRIMARY KEY,
